@@ -61,7 +61,7 @@ export default function App() {
 					</div>
 				</div>
 				<p class="source-link">
-					<a href="https://github.com/Victoriia-Melnyk/weather__app">
+					<a href="https://github.com/Victoriia-Melnyk/weather_app_react">
 						Open-source code
 					</a>{' '}
 					by Viktoriia Melnyk 🇺🇦 🤟
