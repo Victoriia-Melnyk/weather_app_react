@@ -1,13 +1,60 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  background-color: aqua;
+}
+.App {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background-color: aqua;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.widget {
+  max-width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #b7dae6;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.row {
+  justify-content: center;
+}
+div.col-4,
+div.col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 100px;
+  width: 50px;
+}
+
+.forecastImage {
+  width: 110px;
+}
+
+.input-group {
+  margin: 10px 0 30px;
+}
+
+#icon {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+#description::first-letter {
+  text-transform: capitalize;
+}
+.source-link {
+  text-align: center;
+  color: #fff;
+}
+
+.forecast-temperature-min {
+  color: grey;
 }
