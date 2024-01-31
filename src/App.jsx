@@ -4,8 +4,6 @@ import Loader from 'react-loader-spinner';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-// import image from './images/sun.png';
-// import Forecast from './components/Forecast';
 import WeatherInfo from './components/WeatherInfo';
 
 const API_KEY = 'aao33d4100dc1f18c42d1b9teb580408';
@@ -30,6 +28,20 @@ export default function App() {
       setWeather(weather);
     })
 
+  }
+
+  function searchByGeo(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(position => {
+      let latitude = position.coords.latitude;
+			let longtitude = position.coords.longitude;
+      let url = `https://api.shecodes.io/weather/v1/current?lon=${longtitude}&lat=${latitude}&key=${API_KEY}&units=metric`;
+      axios.get(url).then(response => {
+        let weather = <WeatherInfo response={response} />;
+
+				setWeather(weather);
+      })
+    })
   }
   
   return (
@@ -58,24 +70,27 @@ export default function App() {
 								className="btn btn-outline-secondary"
 								type="button"
 								id="geo-button"
+								onClick={searchByGeo}
 							>
 								Use my location
 							</button>
 						</div>
 					</form>
-          {weather ? weather : (
-          <>
-            <p>Choose the city ...</p>
-            <Loader
-              className="spinner"
-              type="Puff"
-              color="aqua"
-              height={100}
-              width={100}
-              timeout={0} //3 secs
-            />
-          </>
-          )}
+					{weather ? (
+						weather
+					) : (
+						<>
+							<p>Choose the city ...</p>
+							<Loader
+								className="spinner"
+								type="Puff"
+								color="aqua"
+								height={100}
+								width={100}
+								timeout={0} //3 secs
+							/>
+						</>
+					)}
 				</div>
 				<footer className="source-link">
 					<a href="https://github.com/Victoriia-Melnyk/weather_app_react">
