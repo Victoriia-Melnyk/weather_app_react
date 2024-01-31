@@ -1,38 +1,77 @@
+html {
+  background-color: aqua;
+}
+
 .App {
+  font-family: "Poppins", sans-serif;
   text-align: center;
+  background-color: aqua;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.widget {
+  max-width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #b7dae6;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row {
+  justify-content: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+div.col-4,
+div.col-2 {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+img {
+  height: 100px;
+  width: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.forecastImage {
+  width: 110px;
+}
+
+.input-group {
+  margin: 10px 0 30px;
+}
+
+#icon {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+#description::first-letter {
+  text-transform: capitalize;
+}
+.source-link {
+  text-align: center;
+  color: #fff;
+}
+
+.forecast-temperature-min {
+  color: grey;
+}
+.spinner {
+  margin-bottom: 200px;
+}
+
+.temperature {
+  font-size: 50px;
+}
+.celciusLink, .fahrenheitLink {
+  text-decoration: none;
+  font-size: 20px;
+  /* color: black; */
+}
+
+ .celciusLink.nonActive, .fahrenheitLink.nonActive {
+  color: black
 }

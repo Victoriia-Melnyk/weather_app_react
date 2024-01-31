@@ -1,5 +1,5 @@
 import React from 'react';
-import image from './images/sun.png';
+import image from '../images/sun.png';
 
 export default function Forecast({ day, temp }) {
 	return (
