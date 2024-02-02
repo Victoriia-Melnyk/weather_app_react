@@ -1,11 +1,19 @@
-html {
-  background-color: aqua;
+body, html {
+  height: 100%;
 }
 
-.App {
+h1 {
+  font-size: 30px;
+}
+
+#root {
+  padding-top: 50px;
+  height: 100%;
+  width: 100%;
   font-family: "Poppins", sans-serif;
-  text-align: center;
-  background-color: aqua;
+  background-image: url('images/sky.jpg');
+  background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .widget {
@@ -13,25 +21,17 @@ html {
   margin: 0 auto;
   text-align: center;
   border: 1px solid #b7dae6;
-  border-radius: 20px;
-  padding: 20px;
-  margin-top: 30px;
 }
 
 .row {
   justify-content: center;
 }
-div.col-4,
-div.col-2 {
+
+.col-4, .col-2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-img {
-  height: 100px;
-  width: 50px;
 }
 
 .forecastImage {
@@ -42,13 +42,13 @@ img {
   margin: 10px 0 30px;
 }
 
-#icon {
+.currentIcon {
   height: 150px;
   width: 150px;
   margin-bottom: 15px;
 }
 
-#description::first-letter {
+.currentDescription::first-letter {
   text-transform: capitalize;
 }
 .source-link {
@@ -56,7 +56,7 @@ img {
   color: #fff;
 }
 
-.forecast-temperature-min {
+.forecastTemperatureMin {
   color: grey;
 }
 .spinner {
@@ -69,7 +69,6 @@ img {
 .celciusLink, .fahrenheitLink {
   text-decoration: none;
   font-size: 20px;
-  /* color: black; */
 }
 
  .celciusLink.nonActive, .fahrenheitLink.nonActive {

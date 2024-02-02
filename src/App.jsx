@@ -22,9 +22,8 @@ export default function App() {
     let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${API_KEY}&units=metric`;
     axios.get(url).then(response => {
       let weather = (
-				<WeatherInfo response={response} />
+				<WeatherInfo response={response} button={'cityButton'} city={city}/>
 			);
-
       setWeather(weather);
     })
 
@@ -37,7 +36,7 @@ export default function App() {
 			let longtitude = position.coords.longitude;
       let url = `https://api.shecodes.io/weather/v1/current?lon=${longtitude}&lat=${latitude}&key=${API_KEY}&units=metric`;
       axios.get(url).then(response => {
-        let weather = <WeatherInfo response={response} />;
+        let weather = <WeatherInfo response={response} button={'geoButton'} />;
 
 				setWeather(weather);
       })
